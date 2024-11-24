@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Global Groove</title>
+    <link rel="icon" href="icons/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icons/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body>
+    <!---NAV BAR FOR HOME PAGE-->
+    <div class="container">
+        <div class="navbar">
+            <img src="images/mylogo.png" alt="my logo" class="logo">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="explore.html">EXPLORE</a></li>
+                <li><a href="about_us.html">ABOUT US</a></li>
+                <li><a href="form.html">CONTACT US</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+            </ul>
+        </div>
+        <!-- CONTENT FOR HOME PAGE -->
+        <div class="content">
+            <div class="left">
+                <h1> THE <br> GLOBAL<br> GROOVE</h1>
+            </div>
+            <div class="right">
+                <p>Click here to listen</p>
+                <img src="images/play(2).png" alt="" id="icon">
+
+            </div>
+        </div>
+    </div>
+    <audio id="mySong">
+        <source src="images/Asa_-_eye-adaba.mp3" type="audio/mp3">
+  
+      </audio>
+      <!-- SCRIPT FOR THE AUDIO -->
+      <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src ="images/pause(2).png";
+            }
+            else{
+                mySong.pause();
+                icon.src = "images/play(2).png"
+            }
+        }
+      </script>
+    
+</body>
+</html>
